@@ -36,7 +36,26 @@ def predict_datapoint():
         predict_pipeline = PredictPipeline()
         results = predict_pipeline.predict(pred_df)
         print(results)
-        return render_template('result.html', results=results[0])
+        # Extract values to pass to template
+        option1 = data.gender
+        option2 = data.race_ethnicity
+        option3 = data.parental_level_of_education
+        option4 = data.lunch
+        option5 = data.test_preparation_course
+        option6 = data.reading_score
+        option7 = data.writing_score
+
+        return render_template(
+            'result.html',
+            results=results[0],
+            option1=option1,
+            option2=option2,
+            option3=option3,
+            option4=option4,
+            option5=option5,
+            option6=option6,
+            option7=option7
+        )
 
 @app.route('/about')
 def about():

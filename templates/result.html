@@ -3,53 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        title {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #2d3a4b;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f6fa;
+            background: #f4f6fb;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-top: 40px;
-        }
-        #results {
-            background: #fff;
-            max-width: 400px;
+        .dashboard-container {
+            max-width: 600px;
             margin: 40px auto;
-            padding: 30px 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(44,62,80,0.08);
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 40px;
+        }
+        .dashboard-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2d3a4b;
+            margin-bottom: 24px;
             text-align: center;
-            font-size: 18px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        #results h2 {
-            color: #2980b9;
-            font-weight: 400;
+        .result-section {
+            background: #eaf6f6;
+            border-left: 5px solid #2ec4b6;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin-bottom: 28px;
         }
-        #predicted-score {
-            font-size: 24px;
-            color: #e74c3c;
+        .result-label {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        .result-label :hover {
+            color: #2ec4b6;
+        }
+        .result-value {
+            font-size: 1.5rem;
             font-weight: bold;
-            margin-top: 30px;
-            font-size: larger;
+            color: #2ec4b6;
+        }
+        .options-section {
+            margin-top: 18px;
+        }
+        .option-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .option-label {
+            color: #888;
+        }
+        .option-value {
+            color: #2d3a4b;
+            font-weight: 500;
+        }
+        @media (max-width: 700px) {
+            .dashboard-container {
+                padding: 18px 8px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Results</h1>
-    <div id="results">
-        <h2>
-            The predicted Maths score is 
-            <br>
-            <div id="predicted-score">
-                {{ results }}
+    <div class="dashboard-container">
+        <div class="dashboard-title">Results</div>
+        <div class="result-section">
+            <div class="result-label">Prediction Result:</div>
+            <div class="result-value">{{ results }}</div>
+        </div>
+        <div class="options-section">
+            <div class="option-row">
+                <span class="option-label">Gender:</span>
+                <span class="option-value">{{ option1 }}</span>
             </div>
-            <br>
-            out of 100.
-        </h2>
+            <div class="option-row">
+                <span class="option-label">Race/Ethnicity:</span>
+                <span class="option-value">{{ option2 }}</span>
+            </div>
+            <div class="option-row">
+                <span class="option-label">Parental Level of Education:</span>
+                <span class="option-value">{{ option3 }}</span>
+            </div>
+            <div class="option-row">
+                <span class="option-label">Lunch:</span>
+                <span class="option-value">{{ option4 }}</span>
+            </div>
+            <div class="option-row">
+                <span class="option-label">Test Preparation Course:</span>
+                <span class="option-value">{{ option5 }}</span>
+            </div>
+            <div class="option-row">
+                <span class="option-label">Reading Score:</span>
+                <span class="option-value">{{ option6 }}</span>
+            </div>
+            <div class="option-row">
+                <span class="option-label">Writing Score:</span>
+                <span class="option-value">{{ option7 }}</span>
+            </div>
+            <!-- Add more options as needed -->
+        </div>
     </div>
 </body>
 </html>
