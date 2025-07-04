@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About This Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f7f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 40px 30px;
+        }
+        h1 {
+            color: #2d3a4b;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #4a5a6a;
+            line-height: 1.7;
+            font-size: 1.1em;
+        }
+        .highlight {
+            color: #0078d7;
+            font-weight: bold;
+        }
+        ul {
+            margin-top: 20px;
+            color: #3a4a5a;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .btn {
+            display: block;
+            margin: 30px auto 0 auto;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-align: center;
+        }
+        #get-started:hover {
+            background: #005bb5;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+        @media (max-width: 600px) { 
+            .container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            } 
+            p, ul {
+                font-size: 1em;
+            }
+            button {
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About This Project</h1>
+        <p>
+            Welcome to the <span class="highlight">Machine Learning Project</span>! This web application demonstrates the power of machine learning by providing interactive features and insightful visualizations about Math Scores of students.
+        </p>
+        <ul>
+            <li>Built with Python, Flask, and modern ML libraries.</li>
+            <li>Clean and user-friendly interface for easy navigation.</li>
+            <li>Real-time predictions and data analysis.</li>
+            <li>Open-source and easy to extend for your own use cases.</li>
+        </ul>
+        <p>
+            Explore the project, try out the features, and feel free to contribute!
+        </p>
+        <a href="/predictdata" id="get-started" class="btn">
+            Get Started
+        </a>
+    </div>
+</body>
+</html>
